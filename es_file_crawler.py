@@ -141,6 +141,4 @@ def get_paragraphe(compteur, tab_ligne_fichier) :
 def est_balise(ligne_tableau) :
     return('<' in ligne_tableau and '>' in ligne_tableau)
 
-        
-
-
+    
