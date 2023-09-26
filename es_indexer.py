@@ -1,4 +1,5 @@
 import json
+import time 
 from elasticsearch import Elasticsearch
 import es_file_crawler
 
@@ -33,7 +34,13 @@ elif 'error' in response:
     print ("ERROR:", response['error']['root_cause'])
     print ("TYPE:", response['error']['type'])
 
+start_time = time.time()
 
 es_file_crawler.folder_crawl("/home/damidas/Bureau/Cours/Stage/Bird/bird/bird", client, "birds")
 
+# Arrêtez le chronomètre
+end_time = time.time()
+# Calculez la durée d'exécution
+execution_time = end_time - start_time
 
+print(f"Le temps d'exécution était de {execution_time} secondes.")
