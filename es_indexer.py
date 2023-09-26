@@ -9,15 +9,16 @@ client = Elasticsearch(
 #Test de réponse
 #print(client.info())
 
-mapping = json.load("mapping.json")
+with open("mapping.json","r") as file :
+    mapping = json.load(file)
 
 
 #Reset index (ingnoré si l'index n'existe pas)
-client.options(ignore_status=[400,404]).indices.delete(index='perf-birds')
+client.options(ignore_status=[400,404]).indices.delete(index='birds')
 
 #Create index
 response = client.indices.create(
-    index="perf-birds",
+    index="birds",
     body=mapping,
     ignore=400
 )
@@ -33,6 +34,6 @@ elif 'error' in response:
     print ("TYPE:", response['error']['type'])
 
 
-es_file_crawler.folder_crawl("/home/damidas/Bureau/Cours/Stage/Bird/bird/bird", client, "perf-birds")
+es_file_crawler.folder_crawl("/home/damidas/Bureau/Cours/Stage/Bird/bird/bird", client, "birds")
 
 

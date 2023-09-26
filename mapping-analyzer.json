@@ -1,0 +1,147 @@
+{
+    "settings": {
+        "analysis": {
+            "filter": {
+                "french_elision": {
+                    "type": "elision",
+                    "articles_case": true,
+                    "articles": [
+                        "l",
+                        "m",
+                        "t",
+                        "qu",
+                        "n",
+                        "s",
+                        "j",
+                        "d",
+                        "c",
+                        "jusqu",
+                        "quoiqu",
+                        "lorsqu",
+                        "puisqu"
+                    ]
+                },
+                "french_stop": {
+                    "type": "stop",
+                    "stopwords": "_french_"
+                },
+                "french_keywords": {
+                    "type": "keyword_marker",
+                    "keywords": []
+                },
+                "french_stemmer": {
+                    "type": "stemmer",
+                    "language": "light_french"
+                }
+            },
+            "analyzer": {
+                "rebuilt_french": {
+                    "tokenizer": "standard",
+                    "char_filter": [
+                        {
+                            "type": "mapping",
+                            "mappings": [
+                                "\n =>"
+                            ]
+                        }
+                    ],
+                    "filter": [
+                        "french_elision",
+                        "lowercase",
+                        "french_stop",
+                        "french_keywords",
+                        "french_stemmer"
+                    ]
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "nom_commun": {
+                "type": "text"
+            },
+            "nom_latin": {
+                "type": "text"
+            },
+            "ordre": {
+                "type": "text"
+            },
+            "famille": {
+                "type": "text"
+            },
+            "genre": {
+                "type": "text"
+            },
+            "espece": {
+                "type": "text"
+            },
+            "descriteur_nom": {
+                "type": "text"
+            },
+            "descripteur_annee": {
+                "type": "integer"
+            },
+            "status_conservation": {
+                "type": "keyword"
+            },
+            "taille_cm": {
+                "type": "integer"
+            },
+            "envergure_min": {
+                "type": "integer"
+            },
+            "envergure_max": {
+                "type": "integer"
+            },
+            "poids_min": {
+                "type": "integer"
+            },
+            "poids_max": {
+                "type": "integer"
+            },
+            "longevite": {
+                "type": "integer"
+            },
+            "nom_etranger_liste": {
+                "type": "text"
+            },
+            "description_espece": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "chant": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "habitat": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "comportement": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "vol": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "regime_alimentaire": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "reproduction": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "distribution": {
+                "type": "text",
+                "analyzer": "std_fr"
+            },
+            "protection": {
+                "type": "text",
+                "analyzer": "std_fr"
+            }
+        }
+    }
+}
