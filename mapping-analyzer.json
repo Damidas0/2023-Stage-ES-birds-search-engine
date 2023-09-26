@@ -1,6 +1,7 @@
 {
     "settings": {
         "analysis": {
+            
             "filter": {
                 "french_elision": {
                     "type": "elision",
@@ -37,14 +38,6 @@
             "analyzer": {
                 "rebuilt_french": {
                     "tokenizer": "standard",
-                    "char_filter": [
-                        {
-                            "type": "mapping",
-                            "mappings": [
-                                "\n =>"
-                            ]
-                        }
-                    ],
                     "filter": [
                         "french_elision",
                         "lowercase",
@@ -108,39 +101,39 @@
             },
             "description_espece": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "chant": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "habitat": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "comportement": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "vol": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "regime_alimentaire": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "reproduction": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "distribution": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             },
             "protection": {
                 "type": "text",
-                "analyzer": "std_fr"
+                "analyzer": "rebuilt_french"
             }
         }
     }
