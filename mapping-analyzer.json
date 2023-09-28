@@ -1,7 +1,6 @@
 {
     "settings": {
         "analysis": {
-            
             "filter": {
                 "french_elision": {
                     "type": "elision",

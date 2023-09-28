@@ -1,0 +1,51 @@
+[
+    {
+        "query": {
+            "query_string": {
+                "default_field": "description_espece",
+                "query": "mésange"
+            }
+        }
+    },
+    {
+        "query": {
+            "query_string": {
+                "default_field": "description_espece",
+                "query": "l'adulte paraît noir et blanc. De près à bonne lumière, on voit que le dessus est en fait gris sombre avec des reflets argentés. Le plumage paraît plus foncé lorsqu'il est mouillé. En période de mue, des nuances brunes apparaissent dans le gris du dessus. Le dessous est blanc. La démarcation entre le gris et le blanc est nette car une ligne noire, élargie au niveau de la poitrine, les sépare de haut en bas. La base du cou et l'extrême haut de la poitrine sont orange, couleur qui passe progressivement au jaune puis au blanc en descendant sur le haut de cette dernière."
+            }
+        }
+    },
+    {
+        "query": {
+            "query_string": {
+                "default_field": "description_espece",
+                "query": "dqzjidoqjdizqodjqidjqzi"
+            }
+        }
+    },
+    {
+        "query": {
+            "query_string": {
+                "default_field": "description_espece",
+                "query": "un grand oiseau gris aux ailes noires"
+            }
+        }
+    },
+    {
+        "query": {
+            "query_string": {
+                "default_field": "description_espece",
+                "query": ""
+            }
+        }
+    },
+    {
+        "query": {
+            "query_string": {
+                "default_field": "description_espece",
+                "query": "manchots a l'aide de orange couleur poussin "
+            }
+        }
+    }
+    
+]

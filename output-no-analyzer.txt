@@ -1,0 +1,6 @@
+2 7.7153287 {'value': 66, 'relation': 'eq'} 
+91 156.77927 {'value': 10000, 'relation': 'gte'} 
+1 None {'value': 0, 'relation': 'eq'} 
+12 10.358919 {'value': 10000, 'relation': 'gte'} 
+0 None {'value': 0, 'relation': 'eq'} 
+7 12.213794 {'value': 5325, 'relation': 'eq'} 
